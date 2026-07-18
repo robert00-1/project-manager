@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "title": "Build Models",
+        "assigned_to": "Alex",
+        "status": "Completed",
+        "project": "CLI Tool"
+    }
+]
