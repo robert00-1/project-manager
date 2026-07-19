@@ -7,6 +7,7 @@ class Project:
     id_counter = 1
 
     def __init__(self, title, description, due_date):
+        """Initialize a new project with a unique ID,title , description, and due date"""
         self.id = Project.id_counter
         Project.id_counter += 1
 
@@ -17,23 +18,28 @@ class Project:
 
     @property
     def title(self):
+        """Return the project title."""
         return self._title
 
     @title.setter
     def title(self, value):
+        """Set the project title after validating it is not empty."""
         if not value.strip():
             raise ValueError("Project title cannot be empty.")
 
         self._title = value
 
     def add_task(self, task):
+        """Add a task from the project."""
         self.tasks.append(task)
 
     def remove_task(self, task):
+        """Remove a task from the project."""
         if task in self.tasks:
             self.tasks.remove(task)
 
     def list_tasks(self):
+        """Return all tasks belonging to the project."""
         return self.tasks
 
     def complete_task(self, title):

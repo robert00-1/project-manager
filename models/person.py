@@ -4,6 +4,8 @@ class Person:
     id_counter = 1
 
     def __init__(self, name, email):
+        """Initialize a new person with a unique ID, name and email."""
+        
         self.id = Person.id_counter
         Person.id_counter += 1
 
@@ -12,6 +14,7 @@ class Person:
 
     @property
     def name(self):
+        """Return the person's name."""
         return self._name
 
     @name.setter
@@ -27,12 +30,14 @@ class Person:
 
     @email.setter
     def email(self, value):
+        """Set the person's nae after validating it is not empty."""
         if "@" not in value:
             raise ValueError("Invalid email address.")
 
         self._email = value
 
     def to_dict(self):
+        """Convert the person object into a dictionary for JSON storage."""
         return {
             "id": self.id,
             "name": self.name,
@@ -41,6 +46,7 @@ class Person:
 
     @classmethod
     def from_dict(cls, data):
+        """Create a person object from a dictionary"""
         person = cls(data["name"], data["email"])
         person.id = data["id"]
 

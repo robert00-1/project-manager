@@ -1,5 +1,6 @@
-# Project Manager CLI
-
+## Title 
+  Project Manager CLI
+## Description
 A command-line application built with Python that allows administrators to manage users, projects, and tasks.
 
 ## Features
@@ -25,12 +26,12 @@ A command-line application built with Python that allows administrators to manag
 - pytest
 - JSON
 
-## Installation
+# setup
 
 Clone the repository:
 
 
-git clone 
+git clone https://github.com/robert00-1/project-manager.git
 
 
 Move into the project:
@@ -71,7 +72,7 @@ python main.py list-users
 
 ### Add a project
 
-```bash
+
 python main.py add-project \
 --user "Alex" \
 --title "CLI Tool" \
@@ -110,13 +111,13 @@ python main.py complete-task --title "Build Models"
 
 
 python -m pytest
-```
+
 
 
 
 ## Project Structure
 
-```
+
 project_manager/
 │
 ├── data/
