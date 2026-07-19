@@ -12,5 +12,12 @@
         "assigned_to": "John",
         "status": "Completed",
         "project": "Inventory System"
+    },
+    {
+        "id": 1,
+        "title": "Create Database",
+        "assigned_to": "damian",
+        "status": "Pending",
+        "project": "Inventory System"
     }
 ]
